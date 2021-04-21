@@ -19,7 +19,7 @@ public class RestControllerTest {
 		Ride ride = new Ride();
 		ride.setName("Murilo");
 		ride.setDuration(35);
-		restTemplate.put("http://localhost:8080/ride_tracker/rides",request);
+		ride = restTemplate.postForObject("http://localhost:8080/ride_tracker/rides",ride, Ride.class);
 	}
 
 
